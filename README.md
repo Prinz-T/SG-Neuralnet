@@ -3,5 +3,5 @@ Originally, this code was published by Sidey-Gibbons, J., Sidey-Gibbons, C. Mach
 Code concerning Generalised Linear Model (GLM) and Generalised Linear Model (GLM) was removed by Prinz-T.
 Added code by Prinz-T is marked with „TP“.
 
-The used dataset „Wolberg, WIlliam. (1992). Breast Cancer Wisconsin (Original). UCI Machine Learning Repository” is distributed online: https://archive-beta.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+original
+The used dataset „Wolberg, WIlliam. (1992). Breast Cancer Wisconsin (Original). UCI Machine Learning Repository” is distributed online: https://archive-beta.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+original.
 This dataset is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license. This allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
