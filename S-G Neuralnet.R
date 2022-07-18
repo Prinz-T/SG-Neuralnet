@@ -6,7 +6,7 @@ cancer = as.data.frame(cancer)
 cancer$bare_nuclei = replace(cancer$bare_nuclei, cancer$bare_nuclei == "?",NA) # Recode missing values with NA.
 cancer = na.omit(cancer) # Remove rows with missing values.
 cancer$bare_nuclei <- as.numeric(cancer$bare_nuclei) # Change data type in number (TP).
-write.table(cancer,"/Users/thorstenprinz/Desktop/Cancer.txt", sep = "\t", row.names = FALSE) # Write whole dataset (TP).
+write.table(cancer,"/path/Cancer.txt", sep = "\t", row.names = FALSE) # Write whole dataset (TP).
 dim(cancer) # Dimensions of dataset (TP).
 percentage <- prop.table(table(cancer$class)) * 100 # Summarize the class distribution (TP).
 cbind(freq=table(cancer$class), percentage=percentage) # (TP).
@@ -21,8 +21,8 @@ index = 1:nrow(cancer) # Create an index vector with as many sequential variable
 testindex = sample(index, trunc(length(index)/3)) # Take a sample of 33.3% of the variable.
 testset = cancer[testindex, ] # Create a test (validation) dataset with 33.3% of the data. 
 trainset = cancer[-testindex, ] # Create a trainig dataset with 66.6% of the data.
-write.table(testset,"/Users/thorstenprinz/Desktop/Cancer_testset.txt", sep = "\t", row.names = FALSE) # Write test dataset (TP).
-write.table(trainset,"/Users/thorstenprinz/Desktop/Cancer_trainset.txt", sep = "\t", row.names = FALSE) # Write train dataset (TP).
+write.table(testset,"/path/Cancer_testset.txt", sep = "\t", row.names = FALSE) # Write test dataset (TP).
+write.table(trainset,"/path/Cancer_trainset.txt", sep = "\t", row.names = FALSE) # Write train dataset (TP).
 x_train = data.matrix(trainset[, 2:10]) # Take the features (x) from the training dataset.
 y_train = as.numeric(trainset[, 11]) # Take the outcomes (y) from the training dataset.
 x_test = data.matrix(testset[, 2:10]) # Take the features (x) from the testing/validation dataset.
