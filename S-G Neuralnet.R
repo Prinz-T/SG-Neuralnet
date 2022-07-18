@@ -60,6 +60,6 @@ bare_nuclei <- as.numeric(readline(prompt = "bare nuclei?"))
 bland_cromatin <- as.numeric(readline(prompt = "bland cromatin?"))
 normal_nucleoli <- as.numeric(readline(prompt = "normal nucleoli?"))
 mitoses <- as.numeric(readline(prompt = "mitoses?"))
-new_data = c(thickness,cell_size,cell_shape,adhesion, epithelial_size,bare_nuclei,bland_cromatin,normal_nucleoli ,mitoses) #Comine the data.
+new_data = c(thickness,cell_size,cell_shape,adhesion, epithelial_size,bare_nuclei,bland_cromatin,normal_nucleoli ,mitoses) # Combine the data.
 new_pred_nnet = predict(nnet_model ,data.matrix(t(new_data)),type="raw") # Apply the new data to the validated nnet model.
 if(round(new_pred_nnet, digits=0)>0) print("Result nnet model: Sample is malignant") else print("Result nnet model: Sample is benign") # Evaluating prediction nnet model (TP).
