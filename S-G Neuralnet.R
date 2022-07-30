@@ -36,6 +36,7 @@ require(NeuralNetTools) # Load the neuralnettools package into this R session (T
 par(mar=c(5.1, 4.1, 4.1, 2.1)) # Setting plotting parameters (TP).
 plotnet(nnet_model) # Plot the nnet model as neural interpretation diagram (TP).
 neuralweights(nnet_model) # Get weights for nnet model (TP).
+garson(nnet_model) # Analyzes relative importance of each variable through magnitude (TP).
 ##---- Model testing ----
 ##---- Extract predictions from the trained models on the new data ----
 nnet_pred = round(predict(nnet_model, x_test, type="raw"),0) # Prediction vector for the neural network.
