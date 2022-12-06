@@ -1,3 +1,4 @@
+options(repos = list(CRAN="http://cran.rstudio.com/"))
 ##---- Data import ----
 cancer = read.csv(paste0("http://archive.ics.uci.edu/ml/machine-learning-databases/", "breast-cancer-wisconsin/breast-cancer-wisconsin.data"), header = FALSE, stringsAsFactors = F) # Load dataset from the UCI repository.
 names(cancer) = c("ID", "thickness", "cell_size", "cell_shape", "adhesion", "epithelial_size", "bare_nuclei", "bland_cromatin", "normal_nucleoli", "mitoses", "class") # Add names to the dataset.
